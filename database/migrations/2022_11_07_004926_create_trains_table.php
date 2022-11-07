@@ -22,7 +22,7 @@ class CreateTrainsTable extends Migration
     // Codice Treno
     // Numero Carrozze
     // In orario
-    // Cancellato
+    // Cancellat
     public function up()
     {
         Schema::create('trains', function (Blueprint $table) {
