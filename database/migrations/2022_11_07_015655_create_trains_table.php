@@ -9,20 +9,8 @@ class CreateTrainsTable extends Migration
     /**
      * Run the migrations.
      *
-     *
-     *
-     *
      * @return void
      */
-    // Azienda
-    // Stazione di partenza
-    // Stazione di arrivo
-    // Orario di partenza
-    // Orario di arrivo
-    // Codice Treno
-    // Numero Carrozze
-    // In orario
-    // Cancellato
     public function up()
     {
         Schema::create('trains', function (Blueprint $table) {
@@ -41,6 +29,7 @@ class CreateTrainsTable extends Migration
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
