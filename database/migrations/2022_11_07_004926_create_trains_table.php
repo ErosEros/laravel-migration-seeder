@@ -21,7 +21,7 @@ class CreateTrainsTable extends Migration
     // Orario di arrivo
     // Codice Treno
     // Numero Carrozze
-    // In orari
+    // In orario
     // Cancellato
     public function up()
     {
