@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-use Faker\generetor as Faker;
+use Faker\Generator as Faker;
 
 use app\Train;
 
@@ -16,10 +16,18 @@ class TrainsTableSeeder extends Seeder
     public function run(Faker $faker)
     {
         //
+        $tempCode = 'vrodkaos';
         for($i = 0; $i < 100; $i++){
-
                 $train = new Train();
                 $train->azienda=$faker->name();
+                $train->stazione_partenza = $faker->city();
+                $train->stazione_arrivo = $faker->city();
+                $train->orario_di_partenza = $faker->time();
+                $train->orario_di_arrivo = $faker->time();
+                $randomDate = $faker->date();
+                $train->data_di_partenza = $randomDate;
+                $train->data_di_arrivo = $randomDate;
+                $train->codice_treno = $tempCode . $i;
                 $train->save();
             }
         }
